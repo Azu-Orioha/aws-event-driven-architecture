@@ -30,8 +30,8 @@
       "Condition": {
         "ArnEquals": {
           "aws:SourceArn": [
-            "arn:aws:sqs:<stockholm>:<767398062641>:<sqsQueueName>",
-            "arn:aws:sqs:<stockholm>:<767398062641>:<sqsQueueName>"
+            "arn:aws:sqs:<stockholm>:<767398062641>:<myqueue1>",
+            "arn:aws:sqs:<stockholm>:<767398062641>:<myqueue1>"
           ]
         }
       }
