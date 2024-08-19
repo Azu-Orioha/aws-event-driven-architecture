@@ -9,7 +9,7 @@
         "Service": "s3.amazonaws.com"
       },
       "Action": "SNS:Publish",
-      "Resource": "arn:aws:sns:<stockholm>:<7398062641>:<snsTopicName>",
+      "Resource": "arn:aws:sns:<stockholm>:<7398062641>:<myTopic>",
       "Condition": {
         "StringEquals": {
           "aws:SourceAccount": "<767398062641>"
@@ -26,7 +26,7 @@
         "Service": "sqs.amazonaws.com"
       },
       "Action": "sns:Subscribe",
-      "Resource": "arn:aws:sns:<stockholm>:<767398062641>:<snsTopicName>",
+      "Resource": "arn:aws:sns:<stockholm>:<767398062641>:<myTopic>",
       "Condition": {
         "ArnEquals": {
           "aws:SourceArn": [
