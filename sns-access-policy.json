@@ -1,0 +1,40 @@
+{
+  "Version": "2024-08-19",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "__default_statement_ID",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "arn:aws:sns:<region>:<accountId>:<snsTopicName>",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "<767398062641>"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:s3:*:*:<aws-message-queues-s3>"
+        }
+      }
+    },
+    {
+      "Sid": "sqs_statement",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "sqs.amazonaws.com"
+      },
+      "Action": "sns:Subscribe",
+      "Resource": "arn:aws:sns:<region>:<767398062641>:<snsTopicName>",
+      "Condition": {
+        "ArnEquals": {
+          "aws:SourceArn": [
+            "arn:aws:sqs:<region>:<767398062641>:<sqsQueueName>",
+            "arn:aws:sqs:<region>:<767398062641>:<sqsQueueName>"
+          ]
+        }
+      }
+    }
+  ]
+}
