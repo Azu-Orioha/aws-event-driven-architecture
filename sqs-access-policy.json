@@ -12,10 +12,10 @@
         "sqs:ReceiveMessage",
         "sqs:sendMessage"
       ],
-      "Resource": "arn:aws:sqs:<region>:<767398062641>:<sqsQueueName>",
+      "Resource": "arn:aws:sqs:<stockholm>:<767398062641>:<sqsQueueName>",
       "Condition": {
         "ArnEquals": {
-          "aws:SourceArn": "arn:aws:lambda:<region>:<767398062641>:<lambdaName>"
+          "aws:SourceArn": "arn:aws:lambda:<stockholm>:<767398062641>:<lambdaName>"
         }
       }
     },
@@ -26,10 +26,10 @@
         "AWS": "*"
       },
       "Action": "sqs:SendMessage",
-      "Resource": "arn:aws:sqs:<region>:<767398062641>:<sqsQueueName>",
+      "Resource": "arn:aws:sqs:<stockholm>:<767398062641>:<sqsQueueName>",
       "Condition": {
         "ArnLike": {
-          "aws:SourceArn": "arn:aws:sns:<region>:<767398062641>:<snsTopicName>"
+          "aws:SourceArn": "arn:aws:sns:<stockholm>:<767398062641>:<snsTopicName>"
         }
       }
     }
