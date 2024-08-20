@@ -1,0 +1,32 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "sqs:DeleteMessage",
+                "logs:CreateLogStream",
+                "sqs:ReceiveMessage",
+                "sqs:GetQueueAttributes",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:sqs:<Global>:<767398062641>:q1",
+                "arn:aws:logs:<stockholm>:<767398062641>:log-group:/aws/lambda/<lambdaName>:*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "sqs:ReceiveMessage",
+                "logs:CreateLogGroup"
+            ],
+            "Resource": [
+                "arn:aws:logs:<stockholm>:<767398062641>:*",
+                "arn:aws:sqs:<stockholm>:<767398062641>:<myqueue1>"
+            ]
+        }
+    ]
+}
