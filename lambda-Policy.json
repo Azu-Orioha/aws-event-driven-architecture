@@ -12,8 +12,8 @@
                 "logs:PutLogEvents"
             ],
             "Resource": [
-                "arn:aws:sqs:<Global>:<767398062641>:q1",
-                "arn:aws:logs:<stockholm>:<767398062641>:log-group:/aws/lambda/<lambdaName>:*"
+                "arn:aws:sqs:eu-north-1:767398062641:q1",
+                "arn:aws:logs:eu-north-1:767398062641:log-group:/aws/lambda/<lambdaName>:*"
             ]
         },
         {
@@ -24,8 +24,8 @@
                 "logs:CreateLogGroup"
             ],
             "Resource": [
-                "arn:aws:logs:<stockholm>:<767398062641>:*",
-                "arn:aws:sqs:<stockholm>:<767398062641>:<myqueue1>"
+                "arn:aws:logs:eu-north-1:767398062641:*",
+                "arn:aws:sqs:eu-north-1:767398062641:myqueue1"
             ]
         }
     ]
